@@ -23,20 +23,18 @@ export class SignatureFormComponent implements OnInit, OnDestroy {
 
 
   generateDoc() {
-    this.srcDocContent = `<table>
-    <tbody><tr>
-    <td><img src="https://tensure.io/icons/icon-144x144.png?v=669fd962b090ca24382d97e5c236b611">
-    </td>
-    <td></td><td></td><td></td><td></td><td></td>
-    <td>
-    <span style="font-family: Arial">${this.name.value}</span><br>
-    <b style="font-family: Arial">${this.jobTitle.value}</b><br>
-    <a href="https://tensure.io" target="_blank"><span zeum4c4="PR_2_0" data-ddnwab="PR_2_0" aria-invalid="grammar" class="Lm ng" style="font-family: Arial">Tensure</span></a><br>
-    <span style="font-family: Arial">Cell: ${this.phone.value}</span><br>
-    <span>${this.location.value}</span><br/>
-    </td>
-    </tr>
-    </tbody></table>`;
+    this.srcDocContent = `
+    <!doctype HTML>
+    <html>
+    <head>
+    </head>
+    <body style="margin-left: auto">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+    </style>
+    
+    </body>
+    </html>`;
   }
 
   constructor() {

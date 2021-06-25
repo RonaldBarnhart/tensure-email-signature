@@ -1,6 +1,7 @@
 <div class="container mx-auto mt-5">
 	<div class="row">
 		<div class="col-sm-4">
+			<div class="d-flex align-items-center justify-content-center">
 			<form>
 				<div class="form-group my-2">
 					<label for="name">Name </label>
@@ -22,12 +23,27 @@
 					<input class="form-control" id="name" type="text" [formControl]="phone">
 				</div>
 			</form>
+			</div>
 		</div>
 		<div class="col-sm-8">
 			<div class="d-flex align-items-center justify-content-center">
-				<iframe width="500" height="500" style="border: 5px solid black;" [attr.srcDoc]="srcDocContent">
-
-				</iframe>
+				
+					<table>
+					  <tbody>
+					    <tr>
+					    <td><img src="../../../assets/tensure-logo.svg">
+					    </td>
+					    <td></td><td></td><td></td><td></td><td></td>
+					    <td>
+					      <span style="font-family: 'PT Sans', sans-serif;">{{this.name.value}}</span><br>
+					      <b style="font-family: 'PT Sans', sans-serif;">{{this.jobTitle.value}}</b><br>
+					      <a href="https://tensure.io" target="_blank"><span zeum4c4="PR_2_0" data-ddnwab="PR_2_0" aria-invalid="grammar" class="Lm ng" style="font-family: 'PT Sans', sans-serif;">Tensure</span></a><br>
+					      <span style="font-family: 'PT Sans', sans-serif;">Cell: {{this.phone.value}}</span><br>
+					      <span style="font-family: 'PT Sans', sans-serif;">{{this.location.value}}</span><br/>
+					    </td>
+					    </tr>
+					  </tbody>
+					</table>
 			</div>
 		</div>
 	</div>
